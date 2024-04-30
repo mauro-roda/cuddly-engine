@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RallyAPI", "RallyAPI.csproj", "{3B6BFBD1-8B95-4CE0-A8D7-53A9F44D35A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RallyAPI", "RallyAPI\RallyAPI.csproj", "{54B5CA5A-2390-4A42-86F8-8E7F98D5F265}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3B6BFBD1-8B95-4CE0-A8D7-53A9F44D35A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B6BFBD1-8B95-4CE0-A8D7-53A9F44D35A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B6BFBD1-8B95-4CE0-A8D7-53A9F44D35A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B6BFBD1-8B95-4CE0-A8D7-53A9F44D35A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54B5CA5A-2390-4A42-86F8-8E7F98D5F265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B5CA5A-2390-4A42-86F8-8E7F98D5F265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B5CA5A-2390-4A42-86F8-8E7F98D5F265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B5CA5A-2390-4A42-86F8-8E7F98D5F265}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
