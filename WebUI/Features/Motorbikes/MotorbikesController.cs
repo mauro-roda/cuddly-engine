@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebUI.Features.Motorbikes
 {
-    [Route("api/[controller]")]
+    [Route("api/motorbikes")]
     [ApiController]
     public class MotorbikesController : ControllerBase
     {
