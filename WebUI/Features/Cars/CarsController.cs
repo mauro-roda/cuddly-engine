@@ -11,7 +11,10 @@ namespace WebUI.Features.Cars
 
         private readonly ApplicationDbContext _context;
 
-        public CarsController(ApplicationDbContext context) {  _context = context; }
+        public CarsController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
 
         [HttpGet]
         public ActionResult<List<Car>> GetCars()
