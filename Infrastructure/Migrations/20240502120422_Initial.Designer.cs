@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240501112648_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20240502120422_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,6 +56,40 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Cars");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Motorbike", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DistanceCoveredInMiles")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FinishedRace")
+                        .HasColumnType("int");
+
+                    b.Property<double>("MalfunctionChance")
+                        .HasColumnType("float");
+
+                    b.Property<int>("MalfunctionsOcurred")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RacedForHours")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Speed")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TeamName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Motorbikes");
                 });
 #pragma warning restore 612, 618
         }
