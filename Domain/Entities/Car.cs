@@ -8,7 +8,7 @@
         public double MalfunctionChance { get; set; }
         public int MalfunctionsOcurred { get; set; }
         public int DistanceCoveredInMiles { get; set; }
-        public int FinishedRace { get; set; }
+        public bool FinishedRace { get; set; }
         public int RacedForHours { get; set; }
     }
 }

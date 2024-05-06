@@ -13,6 +13,7 @@ namespace WebUI.Features.CarRaces
     public class CarRacesController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        public CarRaceService service { get; set; } = new CarRaceService();
 
         public CarRacesController(ApplicationDbContext context)
         {
@@ -90,7 +91,7 @@ namespace WebUI.Features.CarRaces
 
         [SwaggerOperation(Summary = "Add car to race")]
         [HttpPut]
-        [Route("{carRaceID}/addcar/{carID}")]
+        [Route("{carRaceId}/addcar/{carID}")]
         public ActionResult AddCarToCarRace(int carRaceId, int carID)
         {
             var dbCarRace = _context.CarRaces
@@ -111,7 +112,6 @@ namespace WebUI.Features.CarRaces
             }
 
             dbCarRace.Cars.Add(dbCar);
-            _context.CarRaces.Add(dbCarRace);
             _context.SaveChanges();
 
             return Ok(dbCarRace);
@@ -132,9 +132,10 @@ namespace WebUI.Features.CarRaces
             }
 
             carRace.Status = "Started";
+            var result = service.RunRace(carRace);
             _context.SaveChanges();
 
-            return Ok(carRace);
+            return Ok(result);
         }
 
         [SwaggerOperation(Summary = "Delete a race")]
